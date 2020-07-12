@@ -267,6 +267,8 @@ form ul {
 /*=================================
   footer section styling starts here
 =================================*/
+html { scroll-behavior: smooth; }
+
 footer span {
   text-indent: -9999px;
   display: none;
@@ -278,12 +280,14 @@ footer span::before {
   position: fixed;
   right: 3%;
   bottom: 3%;
-  color: #cae8d5;
+  color: #20639b;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 40px;
   text-indent: 0; 
   transition: all .5s ease;
 }
+
+.showBtn { display: block; }
 /*=================================
   footer section styling ends here
 =================================*/
@@ -292,7 +296,6 @@ footer span::before {
 /*media query for min-width 1024px starts here*/
 @media only screen and (min-width: 1024px) {
   .formControl input:hover { background-color: #20639b; }
-  footer span:hover:before { color: #20639b; }
 } 
 
 /*media query for max-width 1024px starts here*/
@@ -322,7 +325,6 @@ footer span::before {
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
   .userDetails { width: 55%; } 
-  .showBtn { display: block; }
 } 
 
 /*media query for 540px starts here*/
