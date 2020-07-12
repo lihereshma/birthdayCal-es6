@@ -20,6 +20,7 @@ const output = Array.from(document.querySelectorAll('.output'));
 const number = document.querySelector('.count');
 const user = document.querySelector('.userDetails');
 const displayYear = document.querySelector('.year');
+const topScroll = document.querySelector('footer span');
 
 const weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 let UsersData;
@@ -57,6 +58,12 @@ window.onload = function() {
     ulBox.appendChild(li);
   }
   user.appendChild(ulBox);
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    topScroll.classList.add('showBtn');
+  } else {
+    topScroll.classList.remove('showBtn');
+  }
 }
 
 class Calendar {
@@ -180,17 +187,7 @@ updateButton.addEventListener('click', (e) => {
 });
 
 // Function for scroll to top button
-var btn = document.querySelector('footer span');
-window.onscroll = function(){
-	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    btn.classList.add('showBtn');
-  } else {
-    btn.classList.remove('showBtn');
-  }
-}
-
-btn.addEventListener('click',scrollTop);
-function scrollTop(){
+topScroll.addEventListener('click', function () {
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+});
