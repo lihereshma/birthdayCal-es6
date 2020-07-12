@@ -178,3 +178,19 @@ updateButton.addEventListener('click', (e) => {
     Calendar.clearInput();
   }  
 });
+
+// Function for scroll to top button
+var btn = document.querySelector('footer span');
+window.onscroll = function(){
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    btn.classList.add('showBtn');
+  } else {
+    btn.classList.remove('showBtn');
+  }
+}
+
+btn.addEventListener('click',scrollTop);
+function scrollTop(){
+	document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
