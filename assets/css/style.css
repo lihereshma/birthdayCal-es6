@@ -264,11 +264,35 @@ form ul {
 /*=================================
   main styling ends here
 =================================*/
+/*=================================
+  footer section styling starts here
+=================================*/
+footer span {
+  text-indent: -9999px;
+  display: none;
+}
+
+footer span::before {
+  content: "\f35b";
+  font-family: "Font Awesome 5 Free";
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  color: #cae8d5;
+  cursor: pointer;
+  font-size: 50px;
+  text-indent: 0; 
+  transition: all .5s ease;
+}
+/*=================================
+  footer section styling ends here
+=================================*/
 
 /*media query starts*/
 /*media query for min-width 1024px starts here*/
 @media only screen and (min-width: 1024px) {
   .formControl input:hover { background-color: #20639b; }
+  footer span:hover:before { color: #20639b; }
 } 
 
 /*media query for max-width 1024px starts here*/
@@ -298,6 +322,7 @@ form ul {
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
   .userDetails { width: 55%; } 
+  .showBtn { display: block; }
 } 
 
 /*media query for 540px starts here*/
