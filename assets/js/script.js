@@ -49,6 +49,7 @@ let iArray = [
   { name : "Vishwanath Padwal", birthday : "1997/12/26" }  
 ]; 
 
+// Function to display users
 window.onload = function() {
   iArray.sort((a, b) => a.name.localeCompare(b.name));
   var ulBox = document.createElement('ul');
@@ -58,12 +59,21 @@ window.onload = function() {
     ulBox.appendChild(li);
   }
   user.appendChild(ulBox);
+}
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+// Function for scroll to top button
+window.onscroll = function(){
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     topScroll.classList.add('showBtn');
   } else {
     topScroll.classList.remove('showBtn');
   }
+}
+
+topScroll.addEventListener('click',scrollTop);
+function scrollTop(){
+	document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 class Calendar {
@@ -184,10 +194,4 @@ updateButton.addEventListener('click', (e) => {
     Calendar.calculate(iArray, yearInput);
     Calendar.clearInput();
   }  
-});
-
-// Function for scroll to top button
-topScroll.addEventListener('click', function () {
-	document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 });
