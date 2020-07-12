@@ -3,48 +3,16 @@
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
 <html lang="en"> 
 
-<head>
- 
+<head> 
   <meta charset="utf-8">
-
-  <title>Client</title>
-  
-  <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
-  <!-- <meta name="description" lang="en" content=""> -->
-  
-  <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
-  <!-- <meta name="keywords" lang="en" content=""> -->
-  
-  <!-- View-port Basics: http://mzl.la/VYREaP -->
-  <!-- This meta tag is used for mobile device to display the page without any zooming,
-       so how much the device is able to fit on the screen is what's shown initially. 
-       Remove comments from this tag, when you want to apply media queries to the website. -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-  
-  <!-- To adhear no-cache for Chrome -->
-  <!--   <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-store, no-cache" />
-  <meta http-equiv="Expires" content="0" /> -->
-
+  <title>Home | Birthday Calender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="shortcut icon" href="favicon.ico">
-
+  <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
-
-  <!-- Slick CSS files-->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css">
-
+  <link rel="stylesheet" media="screen" href="assets/vendor/fontawesome-free-5.13.0-web/css/all.min.css" >
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css">
-
-  <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->	
-  <!--[if lt IE 9]>  
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
-  <![endif]-->
-
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 </head>
 
 <body>
@@ -52,27 +20,81 @@
   <div class="container">
     <!--header section start-->
     <header>
-      
+      <div class="wrapper">
+        <span>Birthday Calendar</span>
+      </div>
     </header>
-    <!--header section end-->
+    <!--header section start-->
     <!--main section start-->
     <main>
-
+      <!-- calendar section start -->
+      <section class="calendar">
+        <div class="wrapper">
+          <div>
+            <p class="year"></p>
+          </div>
+          <ul class="week">
+            <li class="sun">
+              <h2>sun</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="mon">
+              <h2>mon</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="tue">
+              <h2>tue</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="wed">
+              <h2>wed</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="thu">
+              <h2>thu</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="fri">
+              <h2>fri</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+            <li class="sat">
+              <h2>sat</h2>
+              <ul class="output"></ul>
+              <span class="count"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- calendar section end -->
+      <section class="inputForm">
+        <div class="wrapper">
+          <!-- details of users -->
+          <div class="userDetails">
+          </div>
+          <!-- Birthday Form start -->
+          <form id="birthdayForm">
+            <div class="formInput">
+              <input id="yearInput" type="text" placeholder="Enter Year..." maxlength="4" autocomplete="off">
+            </div>
+            <div class="formControl">
+              <input id="button" type="submit" value="Update">
+            </div>
+          </form>
+          <!-- Birthday Form end -->
+        </div>
+      </section>
     </main>
     <!--main section end-->
-
-    <!--footer section start-->
-    <footer>      
-
-    </footer>
-    <!--footer section end-->
-
   </div>
   <!--container end-->
 
-  <!-- <script src="assets/vendor/jquery-3.4.1.min.js"></script>
-  <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
-  <script src="assets/vendor/slick/slick.min.js"></script>
-  <script src="assets/js/script.js"></script> -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
